@@ -1,0 +1,112 @@
+$blue-gray: #34495e
+$blue-gray-darken: #2c3e50
+$blue: #3498db
+$blue-darken: #2980b9
+$green: #1abc9c
+$green-darken: #16a085
+
+#breadcrumb
+  list-style: none
+  display: inline-block
+  margin-left: 0
+
+  li
+    float: left
+    a
+      color: #FFF
+      display: block
+      background: $main-color
+      text-decoration: none
+      position: relative
+      height: 40px
+      line-height: 40px
+      padding: 0 10px 0 5px
+      text-align: center
+      margin-right: 23px
+
+    &:nth-child(even)
+      a
+        background-color: $main-color
+
+        &:before
+          border-color: $main-color
+          border-left-color: transparent
+
+        &:after
+          border-left-color: $main-color
+
+
+
+    &:first-child
+      a
+        padding-left: 35px
+        @include border-radius(4px 0 0 4px)
+        &:before
+          position: absolute
+          width: 40px
+          height: 40px
+          left: 0
+          font-family: "FontAwesome"
+          content: "\f015"
+          border: none
+
+
+
+    &:last-child
+      a
+        padding-right: 15px
+        @include border-radius(0 4px 4px 0)
+        &:after
+          border: none
+
+
+
+
+    a
+      &:before,
+      &:after
+        content: ""
+        position: absolute
+        top: 0
+        border: 0 solid $main-color
+        border-width: 20px 10px
+        width: 0
+        height: 0
+
+      &:before
+        left: -20px
+
+        border-left-color: transparent
+
+      &:after
+        left: 100%
+        border-color: transparent
+        border-left-color: $main-color
+
+      &:hover
+        background-color: $main-color-hover
+
+        &:before
+          border-color: $main-color-hover
+          border-left-color: transparent
+
+        &:after
+          border-left-color: $main-color-hover
+
+
+      &:active
+        background-color: $main-color-hover
+
+        &:before
+          border-color: $main-color-hover
+          border-left-color: transparent
+
+        &:after
+          border-left-color: $main-color-hover
+
+  li + li
+    margin-top: 0
+
+
+
+

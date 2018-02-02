@@ -1,0 +1,72 @@
+.contact-us-form-custom
+  input
+    width: 100%
+    padding: 8px
+    border: 1px solid #d1d1d1
+    +transition(all .4s)
+    &:hover
+      border-color: #0f81cc
+    &:active
+      outline: none
+      border-color: #0f81cc
+    &:focus
+      outline: none
+      border-color: #0f81cc
+
+  input[type="submit"]
+    position: relative
+    z-index: 3
+    display: inline-block
+    overflow: hidden
+    padding: .6rem 2rem
+    color: $white
+    text-align: center
+    cursor: pointer
+    background: transparent
+    border: 1px solid #2b99ff
+    +transform(translateZ(0))
+    +transition(all .4s)
+    +linearGradient(#4cb1ff, #544fc5)
+
+  .webform-client-form
+    > div
+      +flex-wrap(wrap)
+      +flexbox
+      > div
+        width: 100%
+        margin-bottom: 0
+      > div:nth-child(-n+2)
+        //float: left
+        width: 48%
+      > div:nth-child(1)
+        margin-right: 4%
+
+
+
+
+
+
+.contact-us-coordinates
+  ul
+    li
+      position: relative
+      font-size: 14px
+      color: #777777
+      padding-left: 74px
+      margin-bottom: 25px
+      font-weight: 400
+      line-height: 60px
+      +transition(all .4s)
+      i.fa
+        +linearGradient(#2270ff, #0bd1ff)
+        position: absolute
+        left: 0px
+        top: 0px
+        width: 60px
+        height: 60px
+        color: white
+        font-size: 26px
+        line-height: 58px
+        border-radius: 50%
+        text-align: center
+        border: 1px solid #7395bd

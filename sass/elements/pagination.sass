@@ -1,0 +1,98 @@
+$breadcrumbs-color: #616161
+$breadcrumbs-border-color: #484848
+$breadcrumbs-color-hover: $main-color
+
+.pager
+  li.pager-item,
+  li
+    position: relative
+    display: inline-block
+    margin-bottom: 0
+    padding: 0 !important
+    margin-left: 0 !important
+    margin-top: 0 !important
+    margin-bottom: 0 !important
+    text-align: center
+    white-space: nowrap
+    vertical-align: middle
+    cursor: pointer
+    background-image: none
+    border: 1px solid transparent
+    border-radius: 4px
+    background-color: $breadcrumbs-color
+    color: white
+    outline: 0
+    text-decoration: none
+    +transition(all .5s)
+
+    a
+      display: inline-block
+      line-height: 1.428571429
+      height: 35px
+      padding: 6px 12px !important
+      color: white
+
+    &:hover
+      background-color: $breadcrumbs-color-hover
+
+
+
+  li.pager-next,
+  li.pager-last
+    display: inline-block !important
+    border-radius: 4px 0 0 4px
+    margin-right: 18px
+    +transition(all .1s liner)
+
+    a
+      display: inline-block
+      &:hover::after
+        border-left: 17px solid $breadcrumbs-color-hover
+
+
+      &::after
+        content: ""
+        position: absolute
+        top: -1px
+        right: -18px
+        width: 0
+        height: 0
+        border-top: 18px solid transparent
+        border-bottom: 19px solid transparent
+        border-left: 17px solid $breadcrumbs-color
+
+
+
+  .pager-previous,
+  .pager-first
+    display: inline-block !important
+    border-radius: 0 4px 4px 0
+    margin-left: 18px !important
+    transition: all .1s linear
+
+    a
+      display: inline-block
+      &:hover::after
+        border-right: 17px solid $breadcrumbs-color-hover
+
+
+      &::after
+        content: ""
+        position: absolute
+        top: -1px
+        left: -18px
+        width: 0
+        height: 0
+        border-bottom: 18px solid transparent
+        border-top: 19px solid transparent
+        border-right: 17px solid $breadcrumbs-color
+
+  .pager-current
+    cursor: default
+    background: $breadcrumbs-color-hover
+    display: inline-block
+    line-height: 1.428571429
+    height: 35px
+    padding: 8px 12px !important
+    font-weight: 100
+

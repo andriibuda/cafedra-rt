@@ -1,0 +1,59 @@
+// Filter by Course
+
+.courses-filter
+  background-color: #fff
+  +box-shadow(0, 0, 2px, #d4d4d4)
+  label
+    font-weight: 100
+
+  #edit-field-courses-value-i18n-wrapper,
+  #edit-field-course-type-value-i18n-wrapper,
+  #edit-field-courses-value-wrapper
+    padding-top: 0
+    padding-right: 0
+    float: none
+    > label
+      background-color: $dark
+      color: $white
+      padding: 1rem
+      display: inline-block
+      width: 100%
+
+    .views-widget
+      padding: 1rem 1rem 1rem 1.1rem
+
+  .form-type-bef-checkbox:hover
+    label
+      cursor: pointer
+
+  .highlight
+    margin-bottom: 0
+
+  .ajax-progress-throbber
+    display: none
+
+  #edit-field-courses-value-i18n-wrapper
+    .form-item:nth-child(2n)
+      margin-bottom: 15px
+
+
+// Disciplines items
+
+.disciplines-item
+  .views-label
+    //font-weight: bold
+    color: $black
+
+  .views-field-field-courses, .views-field-field-subject-professor
+    +clearfix
+    .views-label
+      margin-right: .3rem
+
+    > div, span
+      float: left
+
+
+// Fix right align of labels
+.node-subject
+  .field-label
+    text-align: left !important

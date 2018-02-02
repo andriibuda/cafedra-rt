@@ -1,0 +1,45 @@
+name = Cafedra RT
+description = Theme for Cafedra RT site
+core = 7.x
+base theme = stark
+
+regions[header] = Header
+regions[help] = Help
+regions[page_top] = Page top
+regions[page_bottom] = Page bottom
+regions[highlighted] = Highlighted
+
+regions[featured] = Featured
+regions[breadcrumbs] = Breadcrumbs
+regions[content] = Content
+regions[sidebar_first] = Sidebar first
+regions[sidebar_second] = Sidebar second
+
+regions[triptych_first] = Triptych first
+regions[triptych_middle] = Triptych middle
+regions[triptych_last] = Triptych last
+
+regions[footer_firstcolumn] = Footer first column
+regions[footer_secondcolumn] = Footer second column
+regions[footer_thirdcolumn] = Footer third column
+regions[footer_fourthcolumn] = Footer fourth column
+regions[footer] = Footer
+regions[footer_copyright] = Footer Copyright
+
+regions[homepage_firstsection] = Homepage first section
+regions[homepage_secondsection] = Homepage second section
+regions[homepage_thirdsection] = Homepage third section
+regions[homepage_fourthsection] = Homepage fourth section
+regions[homepage_fifthsection] = Homepage fifth section
+
+
+stylesheets[all][] = css/style.css
+stylesheets[all][] = css/test.css
+
+scripts[] = js/custom.js
+scripts[] = js/jquery.gotop.js
+scripts[] = js/jquery-migrate-1.2.1.js
+scripts[] = js/custom-jq.js
+scripts[] = js/fix-iframe.js
+
+

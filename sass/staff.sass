@@ -1,0 +1,38 @@
+.news-item
+  .image
+    position: relative
+    overflow: hidden
+    a
+      &:after
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        height: 100%
+        width: 100%
+        +transition(all .3s)
+        background: rgba(0, 0, 0, 0)
+      &:hover
+        img
+          +transform(scale(1.07))
+        &:after
+          background: rgba(0, 0, 0, 0.32)
+
+
+  img
+    +transition(all .3s)
+    &:hover
+      +transform(scale(1.07))
+
+
+.staff-image
+  ul
+    list-style: none
+    margin: 0
+
+
+
+.staff-info
+  .field-label
+    text-align: left !important
+

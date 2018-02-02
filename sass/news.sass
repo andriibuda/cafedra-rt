@@ -1,0 +1,164 @@
+.container-news
+  @extend .container
+  +from(1216px)
+    max-width: 1280px
+    width: 1280px
+
+  #main > .column
+    padding-top: 0
+
+#main.news-page
+  background-color: transparent
+  margin-top: 0
+  +box-shadow(0,0,0,transparent)
+
+  .section
+    padding-top: 5px
+    padding-bottom: 10px
+
+.news-item
+  color: #818181
+  padding: 0.75rem
+  background: #ffffff
+  box-shadow: 0 0 2px #eeeeee
+  +box-shadow(0, 0, 2px, #d4d4d4)
+
+  &:hover
+    +box-shadow(0, 0, 7px, #d4d4d4)
+
+  .image
+    margin: -0.75rem -0.75rem 0.75rem -0.75rem
+
+
+// Last Footer News
+
+.last-news-footer-item
+  margin-bottom: 46px
+  .last-news-footer-news-title
+    padding-top: 0
+    padding-bottom: 0
+    height: 49px
+    overflow: hidden
+    a
+      font-size: 14px
+      //color: #7e7d7d
+      color: #aaa
+      +transition(all .3s)
+      &:hover
+        color: #afafaf
+  .last-news-footer-news-created
+    padding-top: 0
+    padding-bottom: 0
+    color: #0f81cc
+//  .is-12
+//    padding-left: 0
+//    padding-top: 0
+
+// News Slider
+
+.news-slider
+  position: relative
+  padding: 1rem 10% 5rem
+
+  .flickity-page-dots
+    position: absolute
+    left: 0
+    right: 0 
+    bottom: 1rem
+
+  .news-slider-item
+    position: relative
+    width: 32.66666%
+    height: 250px
+    margin-right: 1%
+    //background: #8C8
+    border-radius: 5px
+    counter-increment: carousel-cell
+
+    .image
+      position: absolute
+      top: 0
+      left: 0
+      z-index: -1
+
+    .slider-item-title a
+      position: absolute
+      color: $white
+      text-align: center
+      //height: 30%
+      top: 0
+      left: 0
+      bottom: 0
+      right: 0
+      z-index: 1
+      overflow: hidden
+      +transition(all .4s)
+      span
+        position: absolute
+        bottom: 0
+        left: 0
+        right: 0
+        padding: .8rem
+        background-color: rgba(0, 0, 0, 0.66)
+        +transition(all, .4s)
+
+      .hover-eye
+        position: absolute
+        top: 25%
+        color: lighten(#0e00cf, 20%)
+        font-size: 3.7rem
+        width: 100%
+        text-align: center
+        opacity: 0
+        +transition(all .4s)
+        &:hover
+          color: $white
+
+      &:after, &:before
+        content: ''
+        display: block
+        position: absolute
+        height: 6px
+        width: 100%
+        z-index: 5
+        +linearGradient(#0017b7, #00b9ff)
+        +transition(all .2s)
+
+      &:after
+        top: 0
+        left: -100%
+
+      &:before
+        bottom: 0
+        left: +100%
+
+      &:hover
+        background-color: rgba(0, 0, 0, 0.66)
+        span
+          background-color: rgba(0, 0, 0, 0)
+        .hover-eye
+          opacity: 1
+        &:after, &:before
+          left: 0
+
+
+
+
+    //.slider-item-link 
+    //  position: absolute
+    //  top: 0
+    //  bottom: 0
+    //  right: 0
+    //  left: 0
+    //  z-index: 0
+    //  &:hover
+    //    background-color: #fff
+      //background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(3,3,3,1) 99%, rgba(0,0,0,1) 100%) /* FF3.6-15 */
+      //background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(3,3,3,1) 99%,rgba(0,0,0,1) 100%) /* Chrome10-25,Safari5.1-6 */
+      //background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(3,3,3,1) 99%,rgba(0,0,0,1) 100%) /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#000000',GradientType=0 ) /* IE6-9 */
+
+@media  screen and (max-width: 768px)
+  .news-slider
+    .news-slider-item
+      width: 100% !important

@@ -1,0 +1,404 @@
+//$family-primary: 'PT Sans', 'sans-serif'
+//$family-primary: 'Open Sans', 'sans-serif'
+$family-primary: 'Play', 'PT Sans', sans-serif
+$footer-background-color: #222222
+$footer-links-color: #9b9b9b
+$main-color: #385d96
+$link: $main-color
+$main-color-hover: lighten($main-color, 15%)
+
+@import "../vendor/node_modules/bulma/bulma"
+@import "../vendor/font-awesome-4.7.0/scss/font-awesome"
+@import "../vendor/flag-icon/sass/flag-icon"
+@import "mixins"
+@import "elements/_all"
+
+$main-color-invert: findColorInvert($main-color)
+
+.body-gray-bg
+  background-color: $light
+
+.body-white-bg
+  background-color: $white
+
+.region.region-header
+  +flexbox()
+
+// Language switcher
+.language-switcher ul.language-switcher-locale-url
+  padding-top: 10px
+  height: 74px
+  margin: 0
+  list-style: none
+  li
+    margin-bottom: 0
+    height: 30%
+    a
+      color: $white
+      text-decoration: underline
+
+.language-switcher a
+  background-position: left
+  padding-left: 25px
+  width: 85px
+  display: inline-block
+
+.flickity-page-dots
+  margin-left: 0 !important
+
+// Checkbox style1
+input[type=checkbox]
+  -webkit-appearance: none
+  display: inline-block
+  position: relative
+  top: 3px
+  margin-right: 0.25em
+  padding: 0
+  background: #fff
+  border: 1px solid #B5B5B5
+  width: 16px !important
+  height: 16px !important
+  -webkit-transition: all 0.5s ease
+  -o-transition: all 0.5s ease
+  transition: background 0.5s ease
+  outline: none
+  cursor: pointer
+input[type=checkbox]:checked
+  background: #0074BD
+  box-shadow: inset 0 0 0 4px #fff
+input[type=checkbox]:hover
+  border-color: #0074BD
+
+.navbar-brand
+  .navbar-item
+    padding-top: 0
+    padding-bottom: 0
+    img
+      display: inline-block
+      max-height: 2.15rem
+
+.non-shadow
+  -webkit-box-shadow: none !important
+  -moz-box-shadow: none !important
+  box-shadow: none !important
+
+//
+// Styled title for single pages
+//
+#page
+  h1#page-title
+    margin-bottom: 3rem
+    position: relative
+    &:after
+      content: ''
+      position: absolute
+      bottom: -1rem
+      left: 0
+      display: inline-block
+      height: 2px
+      width: 80px
+      background-color: #4370b4
+    &:before
+      content: ''
+      position: absolute
+      bottom: -1.5rem
+      left: 0
+      display: inline-block
+      height: 2px
+      width: 50px
+      background-color: #4370b4
+
+
+//
+// Styled title for blocks
+//
+.block-title-styled
+  > h2
+    padding-top: 3rem
+    padding-bottom: 1.5rem
+    margin-bottom: 2rem
+    text-align: center
+    position: relative
+    font-weight: 700
+    font-size: 22px
+    text-transform: uppercase
+    color: #363636
+    &:after
+      position: absolute
+      content: ""
+      left: 50%
+      bottom: .6em
+      width: 70px
+      height: 3px
+      background-color: #4073b5
+      margin-left: -35px
+
+
+
+.cafedra-button-1
+  position: relative
+  z-index: 3
+  display: inline-block
+  overflow: hidden
+  padding: .6rem 2rem
+  color: $white
+  text-align: center
+  cursor: pointer
+  background: transparent
+  border: 1px solid #2b99ff
+
+  +transform(translateZ(0))
+  +transition(all .3s)
+
+  &:after
+    content: ''
+    position: absolute
+    z-index: -2
+    display: block
+    width: 100%
+    height: 100%
+    top: 0
+    bottom: 0
+    right: 0
+    left: 0
+    +linearGradient(#4cb1ff, #544fc5)
+  &:before
+    content: ''
+    position: absolute
+    z-index: -1
+    display: block
+    width: 100%
+    height: 100%
+    top: 0
+    bottom: 0
+    right: 0
+    left: -100%
+    +transition(all .3s)
+    +linearGradient(#2e4054, #456a93)
+
+
+.cafedra-button-1:hover
+  color: $white
+  //+linearGradient(#2e4054, #456a93)
+  border-color: #456b93
+  &:before
+    left: 0
+
+.navbar
+  //+box-shadow(0,0,15px,#525252)
+  border-bottom: 2px solid #282828
+  z-index: 100
+  .block
+    margin-bottom: 0
+    height: 100%
+  .content
+    height: 100%
+    +flexbox()
+
+  .is-active
+    .content
+      display: block
+
+  .not-expanded
+    .navbar-link
+      padding-right: 16px
+      &:after
+        border: none
+
+  .navbar-link
+    padding-top: 1.5rem
+    padding-bottom: 1.5rem
+
+    &:after
+      margin-top: -0.315em
+      right: 1.425em
+      border-width: 2px
+//$link: $main-color
+//.navbar.main-color
+//  background-color: $main-color
+//  color: $main-color-invert
+//  a
+//    color: $main-color-invert
+
+#footer.footer
+  margin-top: -7px
+
+
+
+.transparent-bg
+  background-color: transparent
+
+
+.image.bg-page-image
+  height: 500px
+  overflow: hidden
+
+.page-type-margin
+  margin-top: -180px
+
+$jumbo-height: 600px
+
+.site-jumbotron
+  position: relative
+  background: url('../img/bg1.jpg') no-repeat center center
+  height: $jumbo-height
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
+  background-size: cover
+
+#particles-js
+  position: absolute
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+
+.jumbotron-overlay
+  height: 100%
+  width: 100%
+  background-color: rgba(0, 0, 0, 0.1)
+  padding: 15% 0
+
+.jumbotron-heading
+  color: $white
+  text-shadow: 0 0 9px #313131
+  text-align: center
+  
+.background-copyright
+  background-color: #121212
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  margin: 0
+
+#main
+  background-color: #fff
+  margin-top: 2rem
+  margin-bottom: 2rem
+  +box-shadow(0,0,4px, #d0cdcd)
+  .section
+    padding-top: 5px
+  
+// Views elements
+.animated
+  -webkit-animation-duration: 1s
+  animation-duration: 1s
+  -webkit-animation-fill-mode: both
+  animation-fill-mode: both
+
++keyframes(fadeIn)
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+.fadeIn
+  -webkit-animation-name: fadeIn
+  animation-name: fadeIn
+
+.hiding
+  opacity: 0
+
+.dark-gray-stripe
+  background-color: #363637
+  color: #BDBDB5
+  padding-top: 26px
+  padding-bottom: 32px
+
+  h1
+    color: #BDBDB5
+    font-weight: 300
+    font-family: 'Open Sans', sans-serif
+
+.breadcrumb li
+  &:last-child
+    padding: 0.5em 0.75em
+
+#gotop
+  z-index: 9999
+  +box-shadow(0, 0, 3px, #737373)
+  +linearGradient(#2270ff, #0bd1ff)
+
+.footer
+  .block
+    h2
+      position: relative
+      text-align: left
+      font-size: 16px
+      font-weight: 700
+      text-transform: uppercase
+      padding-bottom: 14px
+      color: #ffffff
+      margin-bottom: 40px
+      &:after
+        position: absolute
+        content: ''
+        left: 0px
+        bottom: 0px
+        width: 30px
+        height: 1px
+        background-color: $main-color
+
+#footer_logos
+  figure
+    margin: 0
+  img
+    +transition(all .3s)
+    +filter(grayscale(100%))
+    opacity: .7
+    &:hover
+      +filter(grayscale(0%))
+      opacity: 1
+  .tntu-logo
+    img
+      opacity: .3
+      &:hover
+        +filter(grayscale(0%) saturate(400%))
+        opacity: 1
+
+.footer-menu-links
+  h2
+    margin-bottom: 25px
+  .menu
+    margin: 0
+    li
+      list-style: none
+      margin: 0
+      a
+        position: relative
+        display: inline-block
+        line-height: 24px
+        padding: 2px 0 5px 20px
+        color: $footer-links-color
+        font-size: 14px
+        text-transform: capitalize
+        &:after
+          content: '\f105'
+          position: absolute
+          left: 0px
+          top: 6px
+          line-height: 15px
+          font-size: 16px
+          font-family: 'FontAwesome'
+
+.footer-address
+  color: $footer-links-color
+
+#footer
+  .columns
+    margin-left: 0
+    margin-right: 0
+
+.background-copyright
+  p
+    margin-bottom: 0 !important
+
+@import "news"
+@import "blank"
+@import "staff"
+@import "partners"
+@import "contact-us"
+@import "disciplines"
+@import "postgraduates"
+

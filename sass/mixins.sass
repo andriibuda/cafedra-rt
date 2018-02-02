@@ -1,0 +1,61 @@
+=keyframes($name)
+  @-webkit-keyframes #{$name}
+    @content
+  @-moz-keyframes #{$name}
+    @content
+  @-ms-keyframes #{$name}
+    @content
+  @keyframes #{$name}
+    @content
+
+=box-shadow($top, $left, $blur, $color, $inset:"")
+  -webkit-box-shadow: $top $left $blur $color #{$inset}
+  -moz-box-shadow:    $top $left $blur $color #{$inset}
+  box-shadow:         $top $left $blur $color #{$inset}
+
+=border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius:    $radius
+  -ms-border-radius:     $radius
+  border-radius:         $radius
+
+=transition($transition...)
+    -moz-transition:    $transition
+    -o-transition:      $transition
+    -webkit-transition: $transition
+    transition:         $transition
+
+=flexbox()
+    display: -webkit-box
+    display: -moz-box
+    display: -ms-flexbox
+    display: -webkit-flex
+    display: flex
+
+=flex-wrap($wrap)
+    -webkit-flex-wrap: $wrap
+    -ms-flex-wrap: $wrap
+    flex-wrap: $wrap
+
+=filter($params...)
+  -webkit-filter: $params
+  filter:         $params
+
+
+=linearGradient($top, $bottom)
+  background: $top /* Old browsers */
+  background: -moz-linear-gradient(right,  $top 0%, $bottom 100%) /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom)) /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(right,  $top 0%,$bottom 100%) /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(right,  $top 0%,$bottom 100%) /* Opera 11.10+ */
+  background: -ms-linear-gradient(right,  $top 0%,$bottom 100%) /* IE10+ */
+  background: linear-gradient(to right,  $top 0%,$bottom 100%) /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ) /* IE6-9 */
+
+=transform($transform...)
+  -webkit-transform: $transform
+  -moz-transform: $transform
+  -ms-transform: $transform
+  -o-transform: $transform
+  transform: $transform
+
